@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from './pages/index';
-import SportsNews from './pages/sportsnews';
-import Bookmarks from './pages/bookmarks';
+// import Home from './pages/index';
+// import SportsNews from './pages/sportsnews';
+// import Bookmarks from './pages/bookmarks';
 import Header from './components/header';
 import SideBar from './components/sidebar';
 import MainContent from './components/main';
 import LastestPost from './components/latestpost';
+import HookApi from './components/hookapi';
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
           <LastestPost></LastestPost>
         </div>
         
+        <HookApi></HookApi>
       </div>
       
       
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -41,7 +43,7 @@ function App() {
       <Home></Home>
       <SportsNews></SportsNews>
 
-      <Bookmarks></Bookmarks>
+      <Bookmarks></Bookmarks> */}
     </div>
   );
 }
