@@ -10,7 +10,7 @@ import ProfilePic from '../assets/images/Profile.png';
 const Header = () => {
 	return (
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header full-width-wrap sticky">
 			<div class="container">
 			<div class="col">
 				<div class="col-1">
