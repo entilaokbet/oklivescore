@@ -1,37 +1,45 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
+import React from 'react';
+//import axios from 'axios';
 
-function HookApi() { 
-  const [basketball, setUser] = useState([]);
+//const axios = require("axios");
 
-  const fetchData = () => {
-    return fetch("https://api.thesports.com/v1/basketball/match/diary?user=okseo&secret=939492fd2e49e5499683cf4d624ac4b4", {
-                headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json", 
-                "X-Forwarded-For": "103.104.101.41",                
-                },
-                method: "GET"
-            })
-          .then((response) => response.json())
-          .then((data) => setUser(data));
-  }
+// const options = {
+//   method: 'GET',
+//   url: 'http://localhost/oklivescore/admin/',
+//   headers: {
+//     'Content-Type': 'application/json',
+//     'host': 'api.thesports.com',
+//     'X-Forwarded-For': '103.104.101.41',
+//   }
+// };
 
-  useEffect(() => {
-    fetchData();
-  },[])
+// axios.request(options).then(function (response) {
+//     console.log(response.data);
+// }).catch(function (error) {
+//     console.error(error);
+// });
 
-  return (
-    <main>
-      <h1>User List</h1>
-      <ul>
-        {basketball && basketball.length > 0 && basketball.map((userObj, index) => (
-            <li key={userObj.id}>{userObj.id}</li>
-          ))}
-      </ul>
-    </main>
-  );
-}
+// const HookApi = () => {
+//     return (
+//         <h1>API Connect</h1>
+//     );
+// };
 
-export default HookApi;
+// export default HookApi;
 
  //fetch("https://api.thesports.com/v1/basketball/match/diary?user=okseo&secret=939492fd2e49e5499683cf4d624ac4b4")
+
+class myComponent extends React.Component {
+  componentDidMount() {
+    const apiUrl = 'https://oklive.okbetscore.ph/admin/index.php/okbet-data/';
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => console.log('This is your data', data));
+  }
+
+  render() {
+    return <h1>{}</h1>;
+  }
+}
+export default myComponent;

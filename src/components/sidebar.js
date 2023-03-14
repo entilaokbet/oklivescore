@@ -3,8 +3,8 @@ import React from 'react';
 const SideBar = () => {
 	return (
 
-        <div class="col-content-1 sticky-side">
-            <ul class="side-menu">
+        <div className="col-content-1 sticky-side">
+            <ul className="side-menu">
                 <li>
                     <img src={require('../assets/images/Group-1005.png')} class="" title="" alt="" /> All Sports <span class="counter-balloon">1923</span> 
                 </li>
