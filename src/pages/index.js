@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import SideBar from '../components/Sidebar';
 import MainContent from '../components/HomeContent';
 import LastestPost from '../components/LatestPosts';
-import HookApi from '../components/HookAPI';
+
 
 const Home = () => {
 	return (
@@ -17,8 +17,7 @@ const Home = () => {
 					<MainContent></MainContent>
 					<LastestPost></LastestPost>
 				</div>
-				
-				<HookApi></HookApi>
+
 			</div>
 		</>
 	);

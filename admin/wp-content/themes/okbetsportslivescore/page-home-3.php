@@ -1,5 +1,5 @@
 <?php 
-    /* Template Name: Home Template */ 
+    /* Template Name: Home Template 3 */ 
 
     $curl = curl_init();
 
@@ -38,44 +38,12 @@
         $var = json_decode($response, true);
         $keys = array_keys($var);
 
-        // First Tree
-        for($i = 0; $i < count($var); $i++) {
+        // foreach ($var[$keys[1]] as $key => $val) {
             
-            foreach ($var[$keys[1]] as $key => $val) {
-                
-                echo $key . ' : ' . $val . '<br /><br />';
-
-                // 2nd Tree
-                $kkeys = array_keys($var);
-
-                for ( $c = 0; $c < count($keys); $c++ ) {
-                    
-                    foreach ($var[$keys[3]] as $kkey => $vval) {
-                    
-                        echo $kkey . '<br />';
-                        if ( $kkey == 'stage') {
-                            echo '0';
-                        } else {
-                            
-                            $com = array_keys($vval);
-                            foreach ( $vval[$com[$c]] as $ccom => $cval ) {
-                            
-                                echo $ccom . ' : ' . $cval . '<br />';
-                            
-                            }
-                        }
-                        echo '<br />';
-                    }
-                    echo '<br />';
-                }
-                
-            }
-            echo '<br />';
-        
-        }
+        //     echo $key . ' : ' . $val . '<br />';
+        // }
         //echo $keys[1];
-        
-        // for($i = 0; $i < count($var); $i++) {
+        for($i = 0; $i < count($var); $i++) {
 
         //     /*
         //      * Main Tree
@@ -98,22 +66,69 @@
         //             // echo $vals[$c]. " = second-array {<br>";
 
         //             foreach ( $value as $val => $dval ) {
-        //                 echo $val . ' = ' . $dval . '<br />';
+        //                 // echo $val . ' = ' . $dval . '<br />';
 
         //                 /*
         //                 * 3rd Tree
         //                 */
         //                 foreach ( $value[$vals[$c]] as $val => $dval ) {
-        //                     echo $val . ' = ' . $dval . '<br />';
+        //                     // echo $val . ' = ' . $dval . '<br />';
         //                 }
         //             }
 
-        //             echo '<pre>' . "}<br> </pre>";
+        //             // echo '<pre>' . "}<br> </pre>";
         //         }
             
         //     }
         //     echo "}<br>";
-        // }
+
+
+
+            foreach($var[$keys[$i]] as $key => $value) {
+
+                // echo $key . " : " . $value[$i][0] . "<br />";
+                echo $key . " : " . " --- [".$i."] name : " . $value[$i]['name'] . "<br />";   
+                
+                $vals = array_keys($value);
+                for ( $c = 0; $c < count( $vals ); $c++ ) {
+
+                    /*
+                     * 2nd Tree
+                     */
+                    //echo $vals[$c]. " == second-array {<br>" .$vals['competition_id'];
+
+                    //foreach ( $value[$vals[$c]] as $val => $dval ) {
+                    foreach ( $value as $val => $dval ) {
+                        echo $val . ' = ' . $dval . '<br />';
+                    }
+                    
+                    foreach ( $value[$vals[$c]] as $val => $dval ) {
+                        echo $val . ' = ' . $dval[$c] . '<br />';
+                    }
+                    echo '<pre>' . "}<br> </pre>";
+                }
+
+                $vals = array_keys($value);
+                for ( $c = 0; $c < count( $vals ); $c++ ) {
+
+                    /*
+                        * 2nd Tree
+                        */
+                    echo $vals[$c]. " == second-tree {<br>" .$vals;
+
+                    foreach ( $value as $val => $dval ) {
+                        echo $val . ' = ' . $dval . '<br />';
+
+                        /*
+                            * 3rd Tree
+                            */
+                        echo $val . ' = ' . $dval[$c] . '<br />';
+                    }
+                    
+                    echo '<pre>' . "}<br> </pre>";
+                }
+            }            
+        }
     }
 
     //echo $response;

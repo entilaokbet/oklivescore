@@ -9,8 +9,14 @@ import MenuBookmark from '../assets/images/material-symbols_bookmark-1.png';
 import MenuSearch from '../assets/images/material-symbols_search.png';
 import ProfilePic from '../assets/images/Profile.png';
 
-
 const Header = () => {
+
+	let items = ["All Sports", "Basketball", "Football", "Tennis", "Volleyball", "Rugby", "Baseball", "Ice Hockey", "Badminton", "MMA", "Boxing", "Cue ball", "Moto Sport", "NFL"];
+
+	const handleSelectItem = (items: string) => {
+		console.log(items);
+	};
+
 	return (
 		<>
 		<header id="masthead" className="site-header full-width-wrap sticky">
@@ -20,7 +26,7 @@ const Header = () => {
 					<div className="site-branding">
 						<div className="custom-logo">
 							<a href="/">
-								<img src={OKBetLogo} className="" title="" alt="" width="79.2px" height="32px" />
+								<img src={OKBetLogo} className="LogoStyle" title="OKBET" alt="OKBET"  />
 							</a>
 						</div>
 					</div>
