@@ -723,6 +723,8 @@ textarea {
 	display: block;
 }
 
+
+
 .post,
 .page {
 	margin: 0 0 1.5em;
@@ -1243,7 +1245,126 @@ ul.side-menu li .counter-balloon {
     color: #fff;
     border-radius: 4px;
     width: 30px;
+	height: 19.5px;
 
+}
+li.sb-icons:before {
+	transform: scale(.3);
+    padding: 0px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -5px;
+    left: -15px;
+}
+
+li.sb-icons.all-sports:before {
+	content: url('assets/images/SidebarIcons/all-sports.png');
+}
+li.sb-icons.all-sports.disabled:before {
+	content: url('assets/images/SidebarIcons/all-sports-gray.png');
+}
+
+li.sb-icons.football:before {
+	content: url('assets/images/SidebarIcons/football.png');
+}
+li.sb-icons.football.disabled:before {
+	content: url('assets/images/SidebarIcons/football-gray.png');
+}
+
+li.sb-icons.tennis:before {
+	content: url('assets/images/SidebarIcons/tennis-ball.png');
+}
+li.sb-icons.tennis.disabled:before {
+	content: url('assets/images/SidebarIcons/tennis-ball-gray.png');
+}
+
+li.sb-icons.volleyball:before {
+	content: url('assets/images/SidebarIcons/volleyball.png');
+}
+li.sb-icons.volleyball.disabled:before {
+	content: url('assets/images/SidebarIcons/volleyball-gray.png');
+}
+
+li.sb-icons.rugby:before {
+	content: url('assets/images/SidebarIcons/rugby.png');
+}
+li.sb-icons.rugby.disabled:before {
+	content: url('assets/images/SidebarIcons/rugby-gray.png');
+}
+
+li.sb-icons.baseball:before {
+	content: url('assets/images/SidebarIcons/baseball.png');
+}
+li.sb-icons.baseball.disabled:before {
+	content: url('assets/images/SidebarIcons/baseball-gray.png');
+}
+
+li.sb-icons.icehockey:before {
+	content: url('assets/images/SidebarIcons/Icehockey.png');
+}
+li.sb-icons.icehockey.disabled:before {
+	content: url('assets/images/SidebarIcons/Icehockey-gray.png');
+}
+
+li.sb-icons.badminton:before {
+	content: url('assets/images/SidebarIcons/badminton.png');
+}
+li.sb-icons.badminton.disabled:before {
+	content: url('assets/images/SidebarIcons/badminton-gray.png');
+}
+
+li.sb-icons.mma:before {
+	content: url('assets/images/SidebarIcons/mma.png');
+}
+li.sb-icons.mma.disabled:before {
+	content: url('assets/images/SidebarIcons/mma-gray.png');
+}
+
+li.sb-icons.boxing:before {
+	content: url('assets/images/SidebarIcons/boxing-glove.png');
+}
+li.sb-icons.boxing.disabled:before {
+	content: url('assets/images/SidebarIcons/boxing-glove-gray.png');
+}
+
+li.sb-icons.boxing:before {
+	content: url('assets/images/SidebarIcons/boxing-glove.png');
+}
+li.sb-icons.boxing.disabled:before {
+	content: url('assets/images/SidebarIcons/boxing-glove-gray.png');
+}
+
+li.sb-icons.cue:before {
+	content: url('assets/images/SidebarIcons/Cueball.png');
+}
+li.sb-icons.cue.disabled:before {
+	content: url('assets/images/SidebarIcons/cueball-gray.png');
+}
+
+li.sb-icons.moto:before {
+	content: url('assets/images/SidebarIcons/helmet.png');
+}
+li.sb-icons.moto.disabled:before {
+	content: url('assets/images/SidebarIcons/helmet-gray.png');
+}
+
+li.sb-icons.nfl:before {
+	content: url('assets/images/SidebarIcons/american-football.png');
+}
+li.sb-icons.nfl.disabled:before {
+	content: url('assets/images/SidebarIcons/american-football-gray.png');
+}
+
+li.disabled {
+	color: #B5C3D6;
+}
+li.disabled:hover {
+	border: 1px solid transparent !important;
+	cursor: default;
+}
+li.disabled .counter-balloon {
+	background-color: #B5C3D6 !important;
 }
 
 .nav-tabs {

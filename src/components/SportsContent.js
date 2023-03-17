@@ -18,9 +18,7 @@ const SportsContent = () => {
 
     return (
         <>
-            <h1>Results</h1>
-
-           
+            <h1>Results</h1>          
         </>
     )
 }
